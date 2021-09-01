@@ -43,13 +43,8 @@ public class ArrayQueue<T> {
             backingArray = expandArray;
         }
         //add data to backingArray
-        backingArray[size] = data;
+        backingArray[size+front] = data;
         size += 1;
-
-        //return front pointer to 0 if list only has 1 element.
-        if(size == 1){
-            front = 0;
-        }
     }
 
     /**

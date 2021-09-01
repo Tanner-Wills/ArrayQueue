@@ -12,6 +12,11 @@ public class QueueTester {
         testQueue.enqueue(2);
         testQueue.enqueue(1);
         System.out.println(Arrays.toString(testQueue.getBackingArray()));
+        testQueue.enqueue(5);
+        testQueue.enqueue(4);
+        testQueue.enqueue(3);
+        testQueue.enqueue(2);
+        testQueue.enqueue(1);
 
 
         testQueue.dequeue();
