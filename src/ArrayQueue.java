@@ -68,7 +68,7 @@ public class ArrayQueue<T> {
         }
         T removeFront = backingArray[front];
         backingArray[front] = null;
-        front += 1;
+        front = (front + 1)%backingArray.length;
         size -= 1;
         return removeFront;
     }
