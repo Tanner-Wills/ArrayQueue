@@ -43,7 +43,7 @@ public class ArrayQueue<T> {
             backingArray = expandArray;
         }
         //add data to backingArray
-        backingArray[size+front] = data;
+        backingArray[size+front]%backingarray.length = data;
         front = 0;
         size += 1;
     }
