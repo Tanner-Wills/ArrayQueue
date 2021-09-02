@@ -38,12 +38,13 @@ public class ArrayQueue<T> {
         if((size + 1) > backingArray.length){
             T[] expandArray =  (T[]) new Object[backingArray.length * 2];
             for(int i = 0; i<size; i++){
-                expandArray[i] = backingArray[i];
+                expandArray[i] = backingArray[(front + i)%backingArray.length];
             }
             backingArray = expandArray;
         }
         //add data to backingArray
         backingArray[size+front] = data;
+        front = 0;
         size += 1;
     }
 
